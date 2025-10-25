@@ -20,7 +20,7 @@ export default function About() {
           interactive explorer makes it easy.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed">
-          Our goal is to build a fully responsive and modern web application
+          My goal is to build a fully responsive and modern web application
           using the latest technologies, including React Router v7 for seamless
           routing and Tailwind CSS for a beautiful, responsive user interface.
         </p>
