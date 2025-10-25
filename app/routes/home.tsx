@@ -58,11 +58,11 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <div className="overflow-hidden rounded-lg shadow-lg bg-white p-2">
+            <div className="overflow-hidden rounded-md shadow-xl">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/World_map_-_political_coloured.svg/1200px-World_map_-_political_coloured.svg.png"
                 alt="Colored world countries map"
-                className="w-full h-64 md:h-96 object-cover rounded-md"
+                className="w-full h-auto"
               />
             </div>
           </div>

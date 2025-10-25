@@ -12,12 +12,24 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
   const [search, setSearch] = useState<string>("");
   const [region, setRegion] = useState<string>("");
 
-  const filteredCountries = loaderData.filter((country: any) => {
+  // Normalize loaderData: depending on how the dev/runtime provides loader data
+  // it may be the array itself or wrapped in an object (e.g. { data: [...] }).
+  // Make this component resilient and fall back to an empty array.
+  const raw = loaderData ?? [];
+  const countriesArray: any[] = Array.isArray(raw)
+    ? raw
+    : Array.isArray(raw?.data)
+    ? raw.data
+    : Array.isArray(raw?.loaderData)
+    ? raw.loaderData
+    : [];
+
+  const filteredCountries = countriesArray.filter((country: any) => {
     const matchesRegion =
-      !region || country.region.toLowerCase() === region.toLowerCase();
+      !region || (country.region || "").toLowerCase() === region.toLowerCase();
     const matchesSearch =
       !search ||
-      country.name.common.toLowerCase().includes(search.toLowerCase());
+      (country.name?.common || "").toLowerCase().includes(search.toLowerCase());
     return matchesSearch && matchesRegion;
   });
 
