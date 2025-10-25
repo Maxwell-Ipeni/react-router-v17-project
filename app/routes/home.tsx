@@ -60,7 +60,7 @@ export default function Home() {
           <div className="w-full md:w-1/2">
             <div className="overflow-hidden rounded-md shadow-xl">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/World_map_-_political_coloured.svg/1200px-World_map_-_political_coloured.svg.png"
+                src="/assets/world-map-color.png"
                 alt="Colored world countries map"
                 className="w-full h-auto"
               />
