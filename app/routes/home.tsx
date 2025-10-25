@@ -16,6 +16,7 @@ export default function Home() {
         <div className="flex flex-wrap items-center sm:-mx-3">
           <div className="w-full md:w-1/2 md:px-3">
             <div className="space-y-6 sm:max-w-md lg:max-w-lg">
+              <div className="bg-white rounded-lg p-8 shadow-lg">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
                 <span className="block xl:inline">Explore Countries with</span>
                 <span className="block text-indigo-600 xl:inline">
@@ -53,14 +54,15 @@ export default function Home() {
                   Learn More
                 </Link>
               </div>
+              </div>
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <div className="overflow-hidden rounded-md shadow-xl">
+            <div className="overflow-hidden rounded-lg shadow-lg bg-white p-2">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1200px-World_map_-_low_resolution.svg.png"
-                alt="World countries map"
-                className="w-full h-auto"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/World_map_-_political_coloured.svg/1200px-World_map_-_political_coloured.svg.png"
+                alt="Colored world countries map"
+                className="w-full h-64 md:h-96 object-cover rounded-md"
               />
             </div>
           </div>

@@ -53,7 +53,7 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
           {filteredCountries.map((country: any) => (
             <li
               key={country.cca3}
-              className="bg-white border border-gray-200 rounded-xl p-4 shadow hover:shadow-lg transition"
+              className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-lg transition transform hover:-translate-y-1"
             >
               <Link
                 to={`/countries/${country.name.common}`}
