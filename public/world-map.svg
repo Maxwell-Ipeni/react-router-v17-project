@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Decorative, simplified world map for the Countries header (free to modify) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#60A5FA" />
+      <stop offset="1" stop-color="#06B6D4" />
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b" />
+      <feBlend in="SourceGraphic" in2="b" />
+    </filter>
+  </defs>
+
+  <!-- background circle -->
+  <rect width="100%" height="100%" fill="none" />
+  <g transform="translate(0,0)">
+    <rect x="60" y="40" width="1080" height="520" rx="40" fill="url(#bg)" />
+  </g>
+
+  <!-- simplified continents (stylized, decorative shapes) -->
+  <g transform="translate(0,0) scale(1)" fill="#ffffff" opacity="0.95" filter="url(#soft)">
+    <!-- North America & Greenland -->
+    <path d="M170 140c-5 20 10 48 10 48s-2 18 6 26 30 6 30 6 18-8 40-6 42 8 58 2 10-18 10-18 22-4 30-12 12-18 6-28-18-24-26-30-34-18-56-14-42 6-58 10-38 8-36 36z"/>
+
+    <!-- South America -->
+    <path d="M300 260c8 12 18 30 26 46s12 30 12 30 6 18 14 28 24 18 28 22 12 8 8 18-8 18-6 26 6 16 16 18 26 0 36-6 12-12 8-22-10-24-16-38-10-30-6-46 12-40 10-52-8-26-18-30-28-6-42-6-34 0-34 0-18 6-14 20z"/>
+
+    <!-- Europe & Africa -->
+    <path d="M520 120c12 0 26 4 36 8s18 10 28 12 18 6 24 12 8 12 6 18-6 16-4 24 10 18 10 26-4 18-10 24-16 12-26 12-22 0-32-4-20-8-28-14-14-16-20-22-6-14-4-22 10-26 18-36 22-24 34-28z"/>
+    <path d="M500 220c-6 18-6 36 0 56s12 38 18 50 14 28 26 36 26 14 34 10 6-12 10-22 14-28 18-40 8-30 4-42-10-26-18-34-28-20-44-22-36 2-48 8-14 12-10 20z"/>
+
+    <!-- Africa (lower) -->
+    <path d="M580 260c10 18 22 40 34 64s18 42 18 54-6 26-12 36-18 22-30 26-26 4-34-2-18-14-22-28-6-34-4-52 10-42 18-58 20-36 32-38z"/>
+
+    <!-- Asia -->
+    <path d="M700 120c24 0 56 4 84 18s50 36 66 56 28 40 32 60 4 46-6 66-30 46-52 60-48 26-72 26-46-6-60-18-28-30-34-50-6-44 0-64 22-44 38-58 38-30 56-34z"/>
+
+    <!-- Australia -->
+    <path d="M930 380c-4 6-6 12-4 18s8 12 14 16 14 6 22 6 14-6 18-12 6-12 4-18-8-12-14-14-16-2-20 4-12 6-20 0z"/>
+  </g>
+
+  <!-- subtle grid lines to give 'map' feel -->
+  <g stroke="rgba(255,255,255,0.12)" stroke-width="2" fill="none">
+    <path d="M60 300h1080" />
+    <path d="M60 200h1080" />
+    <path d="M60 400h1080" />
+    <path d="M300 40v520" />
+    <path d="M600 40v520" />
+    <path d="M900 40v520" />
+  </g>
+</svg>

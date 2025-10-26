@@ -41,8 +41,9 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
           <p className="text-sm text-gray-600 mt-1">Browse, search, and filter countries with live data from REST Countries.</p>
         </div>
         <img
-          src="/world-map.svg"
+          src="https://pin.it/6eROjBm8R"
           alt="World map"
+          loading="lazy"
           className="w-36 h-auto hidden sm:block rounded-md shadow-md"
         />
       </div>
