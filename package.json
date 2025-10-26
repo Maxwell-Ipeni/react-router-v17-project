@@ -1,6 +1,7 @@
 {
   "name": "rrv7-project",
-  "private": true,
+  "version": "0.1.0",
+  "private": false,
   "type": "module",
   "scripts": {
     "build": "react-router build",

@@ -35,7 +35,17 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-6 text-gray-900">Countries</h2>
+      <div className="flex items-center justify-between mb-6 gap-4">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">Explore Countries with Real-Time Data</h2>
+          <p className="text-sm text-gray-600 mt-1">Browse, search, and filter countries with live data from REST Countries.</p>
+        </div>
+        <img
+          src="/world-map.svg"
+          alt="World map"
+          className="w-36 h-auto hidden sm:block rounded-md shadow-md"
+        />
+      </div>
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
         <input
           type="text"
