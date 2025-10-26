@@ -60,9 +60,16 @@ export default function Home() {
           <div className="w-full md:w-1/2">
             <div className="overflow-hidden rounded-md shadow-xl">
               <img
-                src="/assets/world-map-color.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
                 alt="Colored world countries map"
                 className="w-full h-auto"
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement;
+                  if (!img.src.endsWith('/world-map.svg')) {
+                    img.onerror = null;
+                    img.src = '/world-map.svg';
+                  }
+                }}
               />
             </div>
           </div>

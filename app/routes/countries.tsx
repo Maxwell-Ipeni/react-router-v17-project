@@ -41,10 +41,18 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
           <p className="text-sm text-gray-600 mt-1">Browse, search, and filter countries with live data from REST Countries.</p>
         </div>
         <img
-          src="https://pin.it/6eROjBm8R"
-          alt="World map"
+          src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+          alt="Colored world countries map"
           loading="lazy"
-          className="w-36 h-auto hidden sm:block rounded-md shadow-md"
+          onError={(e) => {
+            const img = e.currentTarget as HTMLImageElement;
+            // fallback to local svg
+            if (!img.src.endsWith('/world-map.svg')) {
+              img.onerror = null;
+              img.src = '/world-map.svg';
+            }
+          }}
+          className="w-40 h-auto rounded-md shadow-md"
         />
       </div>
       <div className="flex flex-col sm:flex-row gap-4 mb-6">

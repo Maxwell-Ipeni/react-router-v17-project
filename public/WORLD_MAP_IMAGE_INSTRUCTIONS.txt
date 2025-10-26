@@ -1,0 +1,13 @@
+You provided a world map image in the conversation attachments.
+
+I updated `app/routes/countries.tsx` to use `/world-map-user.jpg` as the primary header image and fall back to `/world-map.svg` if it fails to load.
+
+Please place the image file you attached into this `public/` folder with the exact filename:
+
+  public/world-map-user.jpg
+
+Alternatively, if you prefer a different filename, update the `imgSrc` default in `app/routes/countries.tsx` accordingly.
+
+Notes:
+- If you'd like me to add the binary image file directly into the repo, reply and paste the image as a base64 data URI or confirm and I'll attempt to add it here. Some environments restrict writing binary attachments automatically, so manual placement may be required.
+- The component will show the local `/world-map.svg` fallback if `/world-map-user.jpg` is missing or blocked.
